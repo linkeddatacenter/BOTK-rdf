@@ -22,7 +22,7 @@
     },
     "require": {
          "php": ">=5.3",
-         "easyrdf/easyrdf": "*",
-         "botk/core":   "*"
+         "easyrdf/easyrdf": "~0.9",
+         "botk/core":   "~4.0"
     }
 }
