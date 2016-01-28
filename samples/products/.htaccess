@@ -1,0 +1,3 @@
+# Rename this fiel to .htaccess to enable url rewriting
+RewriteEngine On
+RewriteRule ^.+ index.php [QSA,L]

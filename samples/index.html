@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>RDF Samples documentation</title>
+    <link rel="stylesheet" type="text/css" href="http://ontology.it/tools/bofw/v4/css/doc.css">
+  </head>
+  <body>
+    <header>
+      <div class="jumbotron">
+        <h1>BOTK RDF package samples doc</h1>
+        <p id="subject"> </p>
+      </div>
+      <div class="metadata">
+        <dl id="metadata">
+        </dl>
+      </div>
+      <section>
+        <h2>Running samples</h2>
+        To execute samples in this dir:<br>
+        <ol style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+          <li style="box-sizing: border-box;">If not already done, download and install dependencies in project home:<span
+              class="Apple-converted-space">&nbsp;</span><br style="box-sizing: border-box;">
+            <code style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; font-size: 13px; padding: 2px 4px; color: rgb(199, 37, 78); background-color: rgb(249, 242, 244); white-space: nowrap; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">cd
+              ..; curl -s http://getcomposer.org/installer | php;</code><code style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; font-size: 13px; padding: 2px 4px; color: rgb(199, 37, 78); background-color: rgb(249, 242, 244); white-space: nowrap; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">php
+              composer.phar install</code></li>
+          <li>Configure a php enabled web server to publish <code>samples</code> directory and point browser to it.
+            This file should be shown.</li>
+          <li>Click links to run examples.</li>
+          <li>See sources.</li>
+          <li>Play with http headers (i.e. Accepts) and http methods using an interactive&nbsp; REST client compatible
+            with your browser (<a href="http://restforchrome.blogspot.fr/">here an example for chrome</a>).</li>
+        </ol>
+        <h2>sample.php</h2>
+        This script loads <a href="sample.ttl">sample.ttl</a> file ( in RDF turtle format) and publish it as a Linked
+        Data Resource supporting content negotiation. <a href="sample.php">Try it</a>.<br>
+        <h2>sparqAgent.php</h2>
+        This script realizes a simple Semantic Web Agent that acts as a proxy to a generic remote SPARQL endpoint. It
+        accepts as GET parameters an sparql endpoint url, a urlencode sparql query an the username and password to be
+        used to access sparql endpoint. It makes the query to the remote endpoint and provides back result managing
+        content negotiation. It provdes als hyperlinks to edit the query and to show alternate formats for resuts.This
+        script can be <a href="sparqlForm.php">drived by this simple html form</a>.<br>
+        <h2>eCloud Linked Data Platform Server</h2>
+        <p>This simple endpoints implements a LDP Server that presents all features contained in the graph
+          http://e-artspace.com/s/eCloud/ inside http://lod.openlinksw.com/sparql sparql endpoint. Both a
+          ldp:DirectContainer and ldp:Resource view is provided. <a href="eCloud/">Try it</a>.</p>
+        <h2>products Linked Data Platform Server</h2>
+        <p>This simple endpoints implements a LDP Server that describe as ldp:paged Container all products with an
+          associated image inside http://linkedopencommerce.com/sparql sparql endpoint.&nbsp; <a href="products/">Try
+            it</a>.</p>
+        <br>
+        <dl>
+        </dl>
+      </section>
+      <section> </section>
+    </header>
+    <footer> </footer>
+  </body>
+</html>

@@ -1,0 +1,330 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "61e42367081404428a782a00477c3c2d",
+    "packages": [
+        {
+            "name": "bitworking/mimeparse",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ramsey/mimeparse.git",
+                "reference": "ddae6bccdefc2e9f43e7e8b325fc517b947ba93c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ramsey/mimeparse/zipball/ddae6bccdefc2e9f43e7e8b325fc517b947ba93c",
+                "reference": "ddae6bccdefc2e9f43e7e8b325fc517b947ba93c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bitworking\\": "src/Bitworking/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joe Gregorio",
+                    "homepage": "http://bitworking.org"
+                },
+                {
+                    "name": "Andrew \"Venom\" K."
+                },
+                {
+                    "name": "Ben Ramsey",
+                    "homepage": "http://benramsey.com"
+                }
+            ],
+            "description": "Basic functions for handling mime-types, forked from Joe Gregorio's mimeparse library <http://code.google.com/p/mimeparse/>.",
+            "homepage": "http://code.google.com/p/mimeparse/",
+            "keywords": [
+                "accept",
+                "http",
+                "mime"
+            ],
+            "time": "2014-02-26 17:43:53"
+        },
+        {
+            "name": "botk/core",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://botk.googlecode.com/svn/packages/core",
+                "reference": "/trunk/@807"
+            },
+            "require": {
+                "bitworking/mimeparse": "*",
+                "paranoiq/xmlon-encoder": "dev-master",
+                "php": ">=5.3",
+                "respect/rest": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "BOTK\\Core": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Enrico fagnoni",
+                    "email": "e.fagnoni@e-artspace.com"
+                }
+            ],
+            "description": "Super lightweight classes for developing cool RESTful APIs.",
+            "homepage": "http://ontology.it/tools/botk4/core/",
+            "keywords": [
+                "BOTK",
+                "E-Artspace",
+                "rest",
+                "restful"
+            ],
+            "time": "2014-03-03 13:53:33"
+        },
+        {
+            "name": "easyrdf/easyrdf",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/njh/easyrdf.git",
+                "reference": "4ab7b2484d1a6bb72ee3f2f5b24aecd180c072d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/njh/easyrdf/zipball/4ab7b2484d1a6bb72ee3f2f5b24aecd180c072d2",
+                "reference": "4ab7b2484d1a6bb72ee3f2f5b24aecd180c072d2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.8"
+            },
+            "replace": {
+                "njh/easyrdf": "self.version"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=3.5.15",
+                "sami/sami": "dev-master",
+                "squizlabs/php_codesniffer": ">=1.4.3"
+            },
+            "suggest": {
+                "ml/json-ld": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "EasyRdf_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nicholas Humfrey",
+                    "email": "njh@aelius.com",
+                    "homepage": "http://www.aelius.com/njh/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "EasyRdf is a PHP library designed to make it easy to consume and produce RDF.",
+            "homepage": "http://www.easyrdf.org/",
+            "keywords": [
+                "Linked Data",
+                "RDF",
+                "Semantic Web",
+                "Turtle",
+                "rdfa",
+                "sparql"
+            ],
+            "time": "2014-03-01 19:19:07"
+        },
+        {
+            "name": "paranoiq/xmlon-encoder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paranoiq/XmlonEncoder.git",
+                "reference": "e5b8c97c882e6984ed35f2a899304fd19eae9e1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paranoiq/XmlonEncoder/zipball/e5b8c97c882e6984ed35f2a899304fd19eae9e1a",
+                "reference": "e5b8c97c882e6984ed35f2a899304fd19eae9e1a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3.0"
+            },
+            "require-dev": {
+                "nette/nette": "@dev",
+                "nette/tester": "@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Vlasta Neubauer",
+                    "homepage": "http://paranoiq.cz"
+                }
+            ],
+            "description": "Serialize variables to simple XML format, just like JSON",
+            "homepage": "http://paranoiq.cz",
+            "time": "2013-10-13 13:06:25"
+        },
+        {
+            "name": "respect/rest",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Respect/Rest.git",
+                "reference": "94862d39202747c4ce0128ceea8ebab20acdc48d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Respect/Rest/zipball/94862d39202747c4ce0128ceea8ebab20acdc48d",
+                "reference": "94862d39202747c4ce0128ceea8ebab20acdc48d",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Respect\\Rest": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD Style"
+            ],
+            "authors": [
+                {
+                    "name": "Henrique Moody",
+                    "email": "henriquemoody@gmail.com",
+                    "homepage": "http://henriquemoody.com/"
+                },
+                {
+                    "name": "Alexandre Gaigalas",
+                    "email": "alexandre@gaigalas.net"
+                },
+                {
+                    "name": "Kleber Hamada Sato",
+                    "email": "kleberhs007@yahoo.com"
+                },
+                {
+                    "name": "Leandro",
+                    "email": "lleitep3@gmail.com"
+                },
+                {
+                    "name": "Rogerio Prado de Jesus",
+                    "email": "rogeriopradoj@gmail.com"
+                },
+                {
+                    "name": "Anderson Casimiro",
+                    "email": "duodraco@gmail.com"
+                },
+                {
+                    "name": "Augusto Pascutti",
+                    "email": "augusto@phpsp.org.br"
+                },
+                {
+                    "name": "Ben Ramsey",
+                    "email": "ben@benramsey.com"
+                },
+                {
+                    "name": "eduardomarcate",
+                    "email": "eduardo@marcate.info"
+                },
+                {
+                    "name": "Nick Rawe",
+                    "email": "nickrawe2@gmail.com"
+                },
+                {
+                    "name": "Pablo Lacerda de Miranda",
+                    "email": "pablolmiranda@gmail.com"
+                },
+                {
+                    "name": "wesleyvicthor",
+                    "email": "w.v.mendes.s@gmail.com"
+                }
+            ],
+            "description": "Thin controller for RESTful applications",
+            "time": "2012-12-17 09:48:14"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "botk/context",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://botk.googlecode.com/svn/packages/context",
+                "reference": "/trunk/@798"
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "BOTK\\Context": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Enrico fagnoni",
+                    "email": "e.fagnoni@e-artspace.com"
+                }
+            ],
+            "description": "ini file management, sanitization, validation",
+            "homepage": "http://ontology.it/tools/botk4/context/",
+            "keywords": [
+                "BOTK",
+                "E-Artspace",
+                "sanitization",
+                "validation"
+            ],
+            "time": "2014-02-27 16:02:31"
+        }
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": [
+
+    ],
+    "platform": {
+        "php": ">=5.3"
+    },
+    "platform-dev": [
+
+    ]
+}

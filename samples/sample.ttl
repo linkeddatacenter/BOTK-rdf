@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.               
+@prefix dc: <http://purl.org/dc/elements/1.1/>.        
+@prefix dcterms: <http://purl.org/dc/terms/>.        
+
+<http://www.dlib.org/dlib/may98/05contents.html>
+      dc:title         "DLIB Magazine - The Magazine for Digital Library Research - May 1998";
+      dc:description   """D-LIB magazine is a monthly compilation of
+       contributed stories, commentary, and briefings.""";
+      dc:contributor   "Amy Friedlander";
+      dc:publisher     "Corporation for National Research Initiatives";
+      dc:date          "1998-01-05";
+      dc:type          "electronic journal";
+      dc:subject "library use studies";
+      dc:format        "text/html";
+      dc:identifier    <urn:issn:1082-9873>;
+      dcterms:isPartOf <http://www.dlib.org>.
+          
+
+<http://www.dlib.org/dlib/may98/miller/05miller.html>
+   dc:title         "An Introduction to the Resource Description Framework";
+   dc:creator       "Eric J. Miller";
+   dc:description 
+      """The Resource Description Framework (RDF) is an
+       infrastructure that enables the encoding, exchange and reuse of
+       structured metadata. rdf is an application of xml that imposes needed
+       structural constraints to provide unambiguous methods of expressing
+       semantics. rdf additionally provides a means for publishing both
+       human-readable and machine-processable vocabularies designed to
+       encourage the reuse and extension of metadata semantics among
+       disparate information communities. the structural constraints rdf
+       imposes to support the consistent encoding and exchange of
+       standardized metadata provides for the interchangeability of separate
+       packages of metadata defined by different resource description
+       communities.""";
+    dc:publisher     "Corporation for National Research Initiatives";
+    dc:subject "machine-readable catalog record formats";
+    dc:rights        "Copyright © 1998 Eric Miller";
+    dc:type          "Electronic Document";
+    dc:format        "text/html";
+    dc:language      "en";
+    dcterms:isPartOf <http://www.dlib.org/dlib/may98/05contents.html>.
