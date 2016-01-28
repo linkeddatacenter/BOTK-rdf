@@ -2,9 +2,9 @@
 	"name": "botk/rdf",
     "description": "EasyRdf extension to support authentication and reasoning in some sparql endpoints.",
     "type": "library",
-    "license": "GPL-3.0+",
+    "license": "MIT",
     "homepage": "http://ontology.it/tools/botk4/rdf/",
-    "keywords": ["E-Artspace", "EasyRdf", "RDF", "Semantic Web", "Turtle", "Linked Data"],
+    "keywords": ["E-Artspace", "LinkedData.Center", "EasyRdf", "RDF", "Semantic Web", "Turtle", "Linked Data"],
     "minimum-stability": "dev",
     "autoload": {
         "psr-0": {
@@ -17,12 +17,13 @@
             "email": "e.fagnoni@e-artspace.com"
         }
     ],
-    "require-dev": {
-        "botk/context": "*"
-    },
     "require": {
-         "php": ">=5.3",
+         "php": ">=5.5",
          "easyrdf/easyrdf": "~0.9",
-         "botk/core":   "~4.0"
+         "botk/core":   "~5.0"
+    },
+    "require-dev": {
+    	"botk/context": "*",
+        "phpunit/phpunit": "~4.4.0"
     }
 }

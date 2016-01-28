@@ -1,0 +1,23 @@
+filter:
+    excluded_paths:
+        - 'bin/*'
+        - 'public/*'
+        - 'tests/*'
+        - 'test/*'
+        - 'vendor/*'
+        - 'samples/*'
+
+checks:
+    php: true
+    
+coding_style:
+    php: {  }
+
+build:
+    tests:
+        override:
+            -
+                command: 'vendor/bin/phpunit --coverage-clover=coverage.clover'
+                coverage:
+                    file: 'coverage.clover'
+                    format: 'php-clover'
