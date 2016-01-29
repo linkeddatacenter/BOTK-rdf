@@ -10,7 +10,15 @@ use EasyRdf_Sparql_Result as Sparql_Result;
  */
 
 class SparqlClientResult extends AbstractContentNegotiationPolicy
-{    
+{
+
+	// these vars allow to change default html renderer	behaviour
+	public static $tableTitle = 'Sparql solutions';
+	public static $tableHeader = null;
+	public static $tableFooter = null;
+	
+	
+	    
     protected static $renderers = array(
           'text/html'                         => 'htmlRenderer',
           'text/plain'                        => 'textplainRenderer',
@@ -63,22 +71,21 @@ class SparqlClientResult extends AbstractContentNegotiationPolicy
     }
 	
 
-    public static function textplainRenderer(Sparql_Result $data) {
+    public static function textplainRenderer(Sparql_Result $solutions) {
         static::setContentType('text/plain');
-        return $data->dump('text');
+        return $solutions->dump('text');
     }
     
           
-    public static function htmlRenderer(Sparql_Result $graph) {
+    public static function htmlRenderer(Sparql_Result $solutions) {
         static::setContentType('text/html');
-        return Standard::htmlSerializer( $graph->dump('html'), 
-            Standard::$htmlMetadata, get_class($graph), null, null,true);
+        return static::htmlSerializer( $solutions->dump('html'), Standard::$htmlMetadata, static::$tableTitle, static::$tableHeader , static::$tableFooter,true);
     }
 
     
-    public static function serialphpRenderer(Sparql_Result $graph) {
+    public static function serialphpRenderer(Sparql_Result $solutions) {
         static::setContentType('application/x-php');
-        return serialize($graph);  
+        return serialize($solutions);  
     }
 	
 }

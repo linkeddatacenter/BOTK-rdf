@@ -76,8 +76,7 @@ class RDF extends AbstractContentNegotiationPolicy
     public static function htmlRenderer(Graph $graph)
     {
         static::setContentType('text/html');
-        return Standard::htmlSerializer( $graph->dump('html'), 
-            Standard::$htmlMetadata, get_class($graph), null,null,true);
+        return static::htmlSerializer( $graph->dump('html'), Standard::$htmlMetadata, $graph->getUri(), null,null,true);
     }
 
     
