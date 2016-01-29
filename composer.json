@@ -19,7 +19,7 @@
     "require": {
 	     "php": ">=5.5",
 	     "easyrdf/easyrdf": "~0.9",
-	     "botk/core":   "~5.0"
+	     "botk/core":   "~5.1"
     },
     "require-dev": {
 		"botk/context": "*"
