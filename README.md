@@ -43,13 +43,14 @@ This package follows[ BOTK guide line for installation](../overview/#installatio
 
 Add following dependances to **composer.json** file in your project root:
 
+```
     {
       "require": {
         "botk/rdf": "*",
         "botk/context": "*"
       }
     }
-
+```
 Note that botk/context dependency should be added just if you use [SLDPS Classes](#SimpleLinkedDataEndpoint).
 
 
@@ -108,13 +109,12 @@ This content negotiation policy is designed for applications that use&nbsp; Easy
 It provide following response and request representations:
 
       RDF class define following renderer functions: 
-<dl><dt>RDF::turtleRenderer([mixed](http://www.php.net/manual/en/language.pseudo-types.php#language.types.mixed)
-          $data), Standard::n3Renderer([mixed](http://www.php.net/manual/en/language.pseudo-types.php#language.types.mixed)
-          $data)</dt><dd> Serializes data structure as RDF text/turle </dd><dt>RDF::rdfxmlRenderer([mixed](http://www.php.net/manual/en/language.pseudo-types.php#language.types.mixed)
-          $data)</dt><dd> Serializes data structure as RDF application/xml+rdf. </dd><dt>RDF::jsonRenderer([mixed](http://www.php.net/manual/en/language.pseudo-types.php#language.types.mixed)
-          $data)</dt><dd> Serializes data structure using json</dd><dt>RDF::ntriplesRenderer([mixed](http://www.php.net/manual/en/language.pseudo-types.php#language.types.mixed)
-          $data)</dt><dd> serializes data structure RDF ntriples. </dd><dt>RDF::htmlRenderer([mixed](http://www.php.net/manual/en/language.pseudo-types.php#language.types.mixed)
-          $data)</dt><dd> serializes data structure as html. </dd><dt>RDF::serialphpRenderer([mixed](http://www.php.net/manual/en/language.pseudo-types.php#language.types.mixed)
+<dl><dt>RDF::turtleRenderer(mixed $data, Standard::n3Renderer(mixed
+          $data)</dt><dd> Serializes data structure as RDF text/turle </dd><dt>RDF::rdfxmlRenderer(mixed
+          $data)</dt><dd> Serializes data structure as RDF application/xml+rdf. </dd><dt>RDF::jsonRenderer(mixed
+          $data)</dt><dd> Serializes data structure using json</dd><dt>RDF::ntriplesRenderer(mixed
+          $data)</dt><dd> serializes data structure RDF ntriples. </dd><dt>RDF::htmlRenderer(mixed
+          $data)</dt><dd> serializes data structure as html. </dd><dt>RDF::serialphpRenderer(mixed
           $data)</dt><dd> serializes data structure as php.</dd></dl>
 
 ### SparqlClientResult
@@ -133,6 +133,7 @@ This set of classes allow you to implement&nbsp; a simple endpoint to publish li
 
 Here is a simple script that realizes an LDP PAGING server:
 
+```
     class MyRouter extends EndPoint
     {  
         protected function setRoutes() 
@@ -163,6 +164,7 @@ Here is a simple script that realizes an LDP PAGING server:
     } catch ( Exception $e) {
         echo $errorManager->render($e); 
     }
+```
 
 ## LDPController class
 
@@ -171,9 +173,9 @@ This class provides an generic abstract implementation of a LDP paged controller
 
 *   `detectIfHasNextPage()`: that must return true if another linked data page is available. If it
                 is not provided, paging features will be disabled.
-*   `linkData()`: that populate the protected var <var>resultGraph</var> (an EasyRdf_Graph object)
+*   `linkData()`: that populate the protected var `resultGraph` (an EasyRdf_Graph object)
                 with linked resource
-*   `linkMetaData()`: that optionally add metadata to <var>resultGraph</var>
+*   `linkMetaData()`: that optionally add metadata to `resultGraph`
 
 It provides a simple template engine (from Core Package) populated with a set&nbsp; of predefine variables
           placeholders:
@@ -182,7 +184,7 @@ It provides a simple template engine (from Core Package) populated with a set&nb
 *   `{strippedUri}` : the requested uri without query strings and fragment.
 *   `{requestUri}` :&nbsp; the requested uri as written by user (with or partial page info)
 
-The protected <var>context</var> variable contains an instance of Core PagedResourceContext.
+The protected `context` variable contains an instance of Core PagedResourceContext.
 
 ## SparqlLDPController Class
 
@@ -192,21 +194,21 @@ This class extends LDPController and provides a generic&nbsp; implementation of 
 You need to redefine following variables to override defaults :
 
 <dl><dt>$username</dt><dd>the username required to access sparql update endpoint, default is empty</dd><dt>$password</dt><dd>the password required to access sparql update endpoint. only Basic method supported, default is empty</dd><dt>$endpoint</dt><dd>the sparql endpoint uri. The default is empty.&nbsp; Examples of valid open sparql endpoints are:
-            http://dbpedia.org/sparql,&nbsp; http://lod.openlinksw.com/sparql, http://linkedopencommerce.com/sparql </dd><dt>$pagingPolicy</dt><dd>it is a string value that can be <var>AGGRESSIVE</var> or <var>CONSERVATIVE</var> to drive next page
+            http://dbpedia.org/sparql,&nbsp; http://lod.openlinksw.com/sparql, http://linkedopencommerce.com/sparql </dd><dt>$pagingPolicy</dt><dd>it is a string value that can be `AGGRESSIVE` or `CONSERVATIVE` to drive next page
             detection algorithm. The default is&nbsp; AGGRESSIVE</dd><dt>$constructor</dt><dd>must contain a valid&nbsp; sparq query template that build a graph with linked data. Do not include&nbsp;
             LIMIT/OFFSET clause.The default is empty.</dd><dt>$metadata</dt><dd>optionally contains a turtle template with paged resource metadata. The default is empty</dd></dl>
 
 SparqlLDPController class implements LDPController abstract methods:
 
 *   it&nbsp; provides an implementation of `detectIfHasNextPage()` based on a parametric
-                algorithm that use the <var> $pagingPolicy</var> variable. If <var>$pagingPolicy</var>=AGGRESSIVE than `detectIfHasNextPage()`
-                method returns true when last query to sparqls server resulted in exactly <var>$pagesize</var> triples,
-                false otherwise. If&nbsp; <var>$pagingPolicy</var>=CONSERVATIVE returns true when last query to sparql
+                algorithm that use the ` $pagingPolicy` variable. If `$pagingPolicy`=AGGRESSIVE than `detectIfHasNextPage()`
+                method returns true when last query to sparqls server resulted in exactly `$pagesize` triples,
+                false otherwise. If&nbsp; `$pagingPolicy`=CONSERVATIVE returns true when last query to sparql
                 server was not empty.
-*   It provides an implementation of `linkData()` methods based on the sparql query in <var>$selector</var>
+*   It provides an implementation of `linkData()` methods based on the sparql query in `$selector`
                 variable.
 *   It provides an implementation of `linkMedtadata()` methods based on the turtle template in in
-                <var>$metadata</var> variable.
+                `$metadata` variable.
 
 Beside this,&nbsp;SparqlLDPController class implements&nbsp; :
 
@@ -231,6 +233,7 @@ You can use these variables, plus the ones defined in LDPController, in $constru
 
         Here is a full example of a contanainer/resource LDP-PAGING implementation using void and prov ontology to
         annotate resources:
+```
     class MyRouter extends EndPoint
     {  
         protected function setRoutes()
@@ -337,7 +340,7 @@ You can use these variables, plus the ones defined in LDPController, in $constru
     } catch ( Exception $e) {
         echo $errorManager->render($e); 
     }
-
+```
 
 ## License
 
