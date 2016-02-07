@@ -5,63 +5,27 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/botk/rdf.svg?style=flat-square)](https://packagist.org/packages/botk/rdf)
 [![License](https://img.shields.io/packagist/l/botk/rdf.svg?style=flat-square)](https://packagist.org/packages/botk/rdf)
 
-An EasyRdf extension to support authentication, reasoning, LDP server endpoints and more.
+This package is an [EasyRDF](http://www.easyrdf.org/) extension to support authentication,reasoning, LDP server endpoints and more.
 
-This is a BOTK package. Please refer to http://ontology.it/tools/botk for more info
-about BOTK project.
-
-## Quick start
-
-The package is available on [Packagist](https://packagist.org/packages/botk/rdf).
-You can install it using [Composer](http://getcomposer.org).
-
-```bash
-composer require botk/rdf
-```
-
-Some code examples in samples directory.
-
-# RDF package documentation
-
-
-## Abstract
-An EasyRdf extension to support authentication,reasoning, LDP server endpoints and more.
-
-This package is part of [Business Ontology ToolKit (BOTK)](http://ontology.it/tools/botk/).
-
-This package contains a set of libraries to work with RDF data structure. It provides parsers for common RDF
-          serializations (RDF/JSON, N-Triples, RDF/XML, Turtle) and methods for loading RDF data from web
-          resources and&nbsp; [SPARQL1.1 end-points](http://www.w3.org/TR/sparql11-query/). 
+It extends the default [httpclient of EasyRDF](http://www.easyrdf.org/docs/api/EasyRdf_Http_Client.html) to support basic authentication and and provides two content negotiation policies to
+        manage consistently representations for RDF graphs and for Sparql Results data models.
+          
 Beside this it contains an implementation of a simple end point to publish linked data supporting many serialization and html according [Linked Data Platform Editor Draft specification](https://dvcs.w3.org/hg/ldpwg/raw-file/default/ldp.html)
 
-This package is implemented as an extension of [EasyRDF](http://www.easyrdf.org/) libraries. Refer to [EasyRDF documentation](http://www.easyrdf.org/docs) for usage info and examples.
+This package is available on [Packagist](https://packagist.org/packages/botk/rdf).
 
-
-# Installation
-
-This package follows[ BOTK guide line for installation](../overview/#installation) and require [composer](http://getcomposer.org/).
-
-Add following dependances to **composer.json** file in your project root:
+You can install adding following dependances to **composer.json** file in your project root:
 
 ```
     {
       "require": {
-        "botk/rdf": "*",
-        "botk/context": "*"
+        "botk/rdf": "*"
       }
     }
 ```
-Note that botk/context dependency should be added just if you use [SLDPS Classes](#SimpleLinkedDataEndpoint).
 
-
-# Overview
-
-This library extends the default [http
-          client of EasyRDF](http://www.easyrdf.org/docs/api/EasyRdf_Http_Client.html) to support basic authentication and and provides two content negotiation policies to
-        manage consistently representations&nbsp; for RDF graphs and for Sparql Results data models. Beside this, it
-        implements a simple Linked Data Platform Server to publish linked data through a remote sparql server.
-
-# HttpClient class
+# Documentation
+## HttpClient class
 
 This class is a replacement for[EasyRDF http client class](http://www.easyrdf.org/docs/api/EasyRdf_Http_Client.html). It adds the `setAuth(string
           $user, string $password)` method supporting basic http authentication type. HttpClient in turn it is a
@@ -97,7 +61,7 @@ HttpClient provides a simple helper to create an authenticated HTTP client and u
 
 .
 
-# Content negotiation policies
+## Content negotiation policies
 
 ### RDF
 
@@ -124,7 +88,7 @@ It provide following response and request representations:
 
 
 
-# Simple Linked Data Platform Server (SLDPS)
+## Simple Linked Data Platform Server (SLDPS)
 
 This set of classes allow you to implement a simple endpoint to publish linked data according last [Linked Data Platform Woking Group Draft Specifications](http://www.w3.org/2012/ldp/wiki/Main_Page)
           . The provided classes can be used to base&nbsp; Linked Data Platform Server Implementations.
@@ -340,9 +304,9 @@ You can use these variables, plus the ones defined in LDPController, in $constru
     }
 ```
 
-## License
+# License
 
- Copyright © 2016 by  Enrico Fagnoni at [LinkedData.Center](http://LinkedData.Center/)®
+Copyright © 2016 by  Enrico Fagnoni at [LinkedData.Center](http://LinkedData.Center/)®
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
