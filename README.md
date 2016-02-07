@@ -65,14 +65,12 @@ This library extends the default [http
 
 This class is a replacement for[EasyRDF http client class](http://www.easyrdf.org/docs/api/EasyRdf_Http_Client.html). It adds the `setAuth(string
           $user, string $password)` method supporting basic http authentication type. HttpClient in turn it is a
-        lightware alternative to `Zend_Http_client` where all the power of Zend or Guzzle&nbsp; libraries is
-        not needed but you need basic http autentication. In other word you can chose to use EasyRdf_http_client or
-        \BOTK\RDF\HttpClient or Zend_Http_client depending from your needed power. You can also use Guzzle as http
-        engine: have a look to [Sparql package](../sparql/).
+        lightware alternative to *Zend_Http_client* or *Guzzle* libraries.
+
 
 HttpClient is normally used as HTTP protocol wrapper for all EasyRDF specialized clients and for [SparqlClient](#SparqlClient)
-        through [`EasyRdf_Http::setDefaultHttpClient()`](http://www.easyrdf.org/docs/api/EasyRdf_Http.html)&nbsp;
-        method,&nbsp; but it can be also used as a generic Web Resource client.
+        through [`EasyRdf_Http::setDefaultHttpClient()`](http://www.easyrdf.org/docs/api/EasyRdf_Http.html)
+        method, but it can be also used as a generic Web Resource client.
 
 For example, to use simple client identity in accessing a remote sparql endpoint execute:
 
@@ -128,7 +126,7 @@ It provide following response and request representations:
 
 # Simple Linked Data Platform Server (SLDPS)
 
-This set of classes allow you to implement&nbsp; a simple endpoint to publish linked data according last [Linked Data Platform Woking Group Draft Specifications](http://www.w3.org/2012/ldp/wiki/Main_Page)
+This set of classes allow you to implement a simple endpoint to publish linked data according last [Linked Data Platform Woking Group Draft Specifications](http://www.w3.org/2012/ldp/wiki/Main_Page)
           . The provided classes can be used to base&nbsp; Linked Data Platform Server Implementations.
 
 Here is a simple script that realizes an LDP PAGING server:
