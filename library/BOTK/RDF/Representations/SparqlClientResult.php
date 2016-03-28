@@ -59,7 +59,7 @@ class SparqlClientResult extends AbstractContentNegotiationPolicy
 		foreach($solutions as $solution){
 			$rec = array();
 			foreach ($fields as $key=>$field){
-				$rec[] = (string) @$solution->$field;
+				$rec[] = isset($solution->$field)?($solution->$field):'';
 			}
 			fputcsv($buffer, $rec);
 		}
